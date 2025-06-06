@@ -22,7 +22,7 @@ function App() {
   }
 
   useEffect(() => {
-    const ws = new WebSocket('ws://localhost:8080')
+    const ws = new WebSocket('wss://chat-app-backend-fy3j.onrender.com')
     ws.onopen = () => {
       ws.send(JSON.stringify({
         type: "join",
